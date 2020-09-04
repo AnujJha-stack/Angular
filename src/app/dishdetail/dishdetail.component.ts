@@ -48,7 +48,7 @@ const DISH = {
   templateUrl: './dishdetail.component.html',
   styleUrls: ['./dishdetail.component.scss']
 })
-export class DishDetailComponent implements OnInit {
+export class DishdetailComponent implements OnInit {
   constructor() { }
   dish = DISH;
   ngOnInit() {
