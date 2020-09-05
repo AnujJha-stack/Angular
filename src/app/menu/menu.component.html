@@ -11,7 +11,7 @@
 
   <div fxFlex>
     <mat-grid-list cols="2" rowHeight="100px">
-      <mat-grid-tile *ngFor="let dish of dishes">
+      <mat-grid-tile *ngFor="let dish of dishes" (click)="onSelect(dish)">
         <img alt={{dish.name}} height="200px" src={{dish.image}}>
         <mat-grid-tile-footer>
           <!--this is the use of pipe.-->
@@ -20,9 +20,8 @@
       </mat-grid-tile>
     </mat-grid-list>
   </div>
-  <!-- *ngif Directive-->
-  <!-- This execute only if selectedDish is not NULL -->
 
-  <app-dishdetail></app-dishdetail>
+  <app-dishdetail [dish]="selectedDish"></app-dishdetail>
+
 </div>
 
