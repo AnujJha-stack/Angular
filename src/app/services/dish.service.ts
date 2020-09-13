@@ -14,4 +14,11 @@ export class DishService {
   getDishes(): Dish[] {
     return DISHES;
   }
+  getDish(id: string): Dish {
+    // tslint:disable-next-line:no-unused-expression
+    return DISHES.filter((dish) => {dish.id === id} )[0];
+  }
+  getFeatureDish(): Dish {
+    return  DISHES.filter((dish) => dish.featured)[0];
+  }
 }
